@@ -19,8 +19,6 @@ def won?(board)
       return set
     elsif board.all? {|item| item == " "} || board.all? {|item| item == ""}
       return false
-    elsif full?(board)
-      return false
     end
   end
   # return set
