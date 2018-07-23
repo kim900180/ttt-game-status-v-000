@@ -23,6 +23,7 @@ WIN_COMBINATIONS = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5
 # end
 
 def won?(board)
+  win_set = []
   position_1 = " "
   position_2 = " "
   position_3 = " "
@@ -32,6 +33,9 @@ def won?(board)
     position_2 = board[set[1]]
     position_3 = board[set[2]]
   end
+
+  if position_1 == "X" && position_2 == "X" && position_3 == "X"
+    
 
 end
 
