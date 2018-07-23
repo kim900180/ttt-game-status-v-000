@@ -27,7 +27,7 @@ def won?(board)
   position_2 = " "
   position_3 = " "
 
-  WIN_COMBINATIONS.each do |set|
+  if WIN_COMBINATIONS.each do |set|
     position_1 = board[set[0]]
     position_2 = board[set[1]]
     position_3 = board[set[2]]
@@ -38,6 +38,9 @@ def won?(board)
       return set
     end
   end
+else
+  return false
+end
 end
 
 def full?(board)
