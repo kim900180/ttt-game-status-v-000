@@ -78,6 +78,6 @@ def winner(board)
   elsif win_set != false && board[win_set[0]] == "O" && over?(board) && !draw?(board)
     return "O"
   else
-    return false
+    return nil
   end
 end
