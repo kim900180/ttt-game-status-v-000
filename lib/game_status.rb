@@ -9,7 +9,7 @@ WIN_COMBINATIONS = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5
 def won?(board)
   win_set = []
   WIN_COMBINATIONS.each do |set|
-    if (board[set[0]] == "O" && board[set[1]] == "O" &&  board[set[2]] == "O") || (board[set[0]] == "X" && board[set[1]] == "X" &&  board[set[2]] == "X")
+    if (board[set[0]] == "O" && board[set[1]] == "O" &&  board[set[2]] == "O" && !full?(board)) || (board[set[0]] == "X" && board[set[1]] == "X" &&  board[set[2]] == "X" && full?(board))
       return set
     elsif board.all? {|item| item == " "} || board.all? {|item| item == ""}
       return false
