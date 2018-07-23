@@ -23,7 +23,7 @@ WIN_COMBINATIONS = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5
 # end
 
 def won?(board)
-  win_set = []
+  win_combination = []
   position_1 = " "
   position_2 = " "
   position_3 = " "
@@ -32,13 +32,13 @@ def won?(board)
     position_1 = board[set[0]]
     position_2 = board[set[1]]
     position_3 = board[set[2]]
-    win_set = set
+    win_combination = set
   end
 
   if position_1 == "X" && position_2 == "X" && position_3 == "X"
     return win_set
   elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
-    return win_set
+    return win_combination
   else
     return false
   end
