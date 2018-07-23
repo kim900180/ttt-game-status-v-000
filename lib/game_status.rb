@@ -19,7 +19,7 @@ def won?(board)
       return set
     elsif board.all? {|item| item == " "} || board.all? {|item| item == ""}
       return false
-    else 
+    else
       return false
     end
   end
