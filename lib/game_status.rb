@@ -72,10 +72,9 @@ def over?(board)
 end
 
 def winner(board)
-  win_set = won?(board)
-  if win_set != false && board[win_set[0]] == "X"
+  if won?(board) && board[win_set[0]] == "X"
     return "X"
-  elsif win_set != false && board[win_set[0]] == "O"
+  elsif won?(board) && board[win_set[0]] == "O"
     return "O"
   else
     return nil
