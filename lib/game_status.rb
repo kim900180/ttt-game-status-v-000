@@ -11,7 +11,7 @@ def won?(board)
   WIN_COMBINATIONS.each do |set|
     if (board[set[0]] == "O" && board[set[1]] == "O" &&  board[set[2]] == "O") || (board[set[0]] == "X" && board[set[1]] == "X" &&  board[set[2]] == "X")
       return set
-    else
+    elsif board.all? {|item| item == " "}
       return false
     end
   end
