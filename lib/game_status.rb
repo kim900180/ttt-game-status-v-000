@@ -23,10 +23,10 @@ WIN_COMBINATIONS = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5
 # end
 
 def won?(board)
-  position_1 = nil
-  position_2 = nil
-  position_3 = nil
-  
+  position_1 = " "
+  position_2 = " "
+  position_3 = " "
+
   WIN_COMBINATIONS.each do |set|
     position_1 = board[set[0]]
     position_2 = board[set[1]]
