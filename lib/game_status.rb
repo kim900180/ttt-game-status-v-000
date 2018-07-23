@@ -32,10 +32,11 @@ def won?(board)
     position_1 = board[set[0]]
     position_2 = board[set[1]]
     position_3 = board[set[2]]
+    win_set = set
   end
 
   if position_1 == "X" && position_2 == "X" && position_3 == "X"
-    
+
 
 end
 
