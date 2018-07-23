@@ -21,7 +21,6 @@ def won?(board)
       return false
     end
   end
-  # return set
 end
 
 def full?(board)
