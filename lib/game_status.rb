@@ -74,7 +74,7 @@ end
 def winner(board)
   win_set = won?(board)
   winner = nil
-  if draw?(board)
+  if draw?(board) && over?(board)
     winner = nil
   elsif win_set != false && board[win_set[0]] == "X" && over?(board)
     winner = "X"
