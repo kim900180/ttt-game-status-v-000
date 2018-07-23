@@ -40,8 +40,8 @@ def won?(board)
     else
       return false
     end
+    return win_combination
   end
-  return win_combination
 end
 
 def full?(board)
