@@ -9,16 +9,12 @@ WIN_COMBINATIONS = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5
 def won?(board)
   win_set = []
   WIN_COMBINATIONS.each do |set|
-    if board[set[0]] == board[set[1]] && board[set[1]] == board[set[2]] && position_taken?(board, set[0]) && position_taken?(board, set[1]) && position_taken?(board, set[2])
+    if board[set[0]] == board[set[1]] && board[set[1]] == board[set[2]] && position_taken?(board, set[0])
       return set
-    elsif board.all? {|item| item == " "} || board.all? {|item| item == ""}
+    else
       return false
     end
   end
-  # if board.all? {|item| item == " "} || full?(board) == true
-  #   return false
-  # end
-  # return win_set
 end
 
 def full?(board)
