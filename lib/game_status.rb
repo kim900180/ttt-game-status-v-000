@@ -72,7 +72,7 @@ def over?(board)
 end
 
 def winner(board)
-  winner_value = " "
+  winner_value = nil
   if board[won?(board)[0]] == "X" && over?(board) && !draw?(board)
     winner_value = "X"
   elsif board[won?(board)[0]] == "O" && over?(board) && !draw?(board)
