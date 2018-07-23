@@ -24,6 +24,7 @@ def won?(board)
     elsif board.all? {|item| item == " "} || board.all? {|item| item == ""}
       return false
     end
+    return win_set
   end
   # return set
 end
