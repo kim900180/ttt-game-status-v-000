@@ -10,11 +10,12 @@ def won?(board)
   win_set = []
   WIN_COMBINATIONS.each do |set|
     if board[set[0]] == board[set[1]] && board[set[1]] == board[set[2]] && position_taken?(board, set[0])
-      return set
+      win_set = set
     else
       return false
     end
   end
+  return win_set
 end
 
 def full?(board)
