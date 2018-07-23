@@ -17,7 +17,7 @@ def won?(board)
       return set
     elsif board[set[0]] == "X" && board[set[1]] == "X" &&  board[set[2]] == "X" && full?(board)
       return set
-    elsif board.all? {|item| item == " "} || board.all? {|item| item == ""} || full?(board)
+    elsif board.all? {|item| item == " "} || board.all? {|item| item == ""}
       return false
     end
   end
