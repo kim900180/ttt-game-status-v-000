@@ -74,12 +74,12 @@ end
 def winner(board)
   win_set = won?(board)
   winner = nil
-  if draw?(board) && over?(board)
-    winner = nil
-  elsif win_set != false && board[win_set[0]] == "X" && over?(board)
+  if win_set != false && board[win_set[0]] == "X" && over?(board)
     winner = "X"
   elsif win_set != false && board[win_set[0]] == "O" && over?(board)
     winner = "O"
+  else
+    winner = nil
   end
   return winner
 end
